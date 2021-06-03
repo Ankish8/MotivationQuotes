@@ -7,13 +7,38 @@
 
 import Foundation
 class QuotesViewModel: ObservableObject {
-    @Published var quotes: [QuotesModel] = [QuotesModel(quote: "This is a Sample Quote 1"),
-                                            QuotesModel(quote: "This is a Sample Quote 2"),
-                                            QuotesModel(quote: "This is a Sample Quote 3"),
-                                            QuotesModel(quote: "This is a Sample Quote 4"),
-                                            QuotesModel(quote: "This is a Sample Quote 5"),
-                                            QuotesModel(quote: "This is a Sample Quote 6"),
-                                            QuotesModel(quote: "This is a Sample Quote 7")
-    ]
-    @Published var quoteCount: Int = 0
+    @Published var quotes = [QuotesModel]()
+    init() {
+        // get the path to the json file whin the app bundle
+        let pathString = Bundle.main.path(forResource: "data", ofType: "json")
+        
+        if let path = pathString {
+            
+            // Create a url object
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                // Create a data objecy with the data at the url
+                let data = try Data(contentsOf: url)
+                
+                // Parse the data
+                let decoder = JSONDecoder()
+                do {
+                    let quoteData = try decoder.decode([QuotesModel].self, from: data)
+                    for r in quoteData {
+                        r.id = UUID()
+                    }
+                    self.quotes = quoteData
+                }
+                catch {
+                    print(error)
+                }
+                
+                
+                
+            } catch {
+                print(error)
+            }
+        }
+    }
 }

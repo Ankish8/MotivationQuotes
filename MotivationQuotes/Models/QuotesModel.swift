@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct QuotesModel: Identifiable {
-    let id = UUID()
-    let quote: String
+class QuotesModel: Identifiable, Decodable {
+    var id:UUID?
+    var quote = ""
 }
