@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A232E88B26666D9D007FE51B /* MotivationQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E88A26666D9D007FE51B /* MotivationQuotesApp.swift */; };
-		A232E88D26666D9D007FE51B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E88C26666D9D007FE51B /* ContentView.swift */; };
+		A232E88D26666D9D007FE51B /* OnboardingScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E88C26666D9D007FE51B /* OnboardingScreen1.swift */; };
 		A232E88F26666D9F007FE51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232E88E26666D9F007FE51B /* Assets.xcassets */; };
 		A232E89226666D9F007FE51B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232E89126666D9F007FE51B /* Preview Assets.xcassets */; };
 		A232E89726666D9F007FE51B /* MotivationQuotes WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A232E89626666D9F007FE51B /* MotivationQuotes WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -19,6 +19,13 @@
 		A232E8AC26666DA0007FE51B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E8AB26666DA0007FE51B /* ComplicationController.swift */; };
 		A232E8AE26666DA1007FE51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232E8AD26666DA1007FE51B /* Assets.xcassets */; };
 		A232E8B126666DA1007FE51B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A232E8B026666DA1007FE51B /* Preview Assets.xcassets */; };
+		A232E8C226667A0F007FE51B /* OnboardingScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E8C126667A0F007FE51B /* OnboardingScreen2.swift */; };
+		A232E8C62667367E007FE51B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E8C52667367E007FE51B /* HomeScreen.swift */; };
+		A232E8CA26677EC5007FE51B /* QuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E8C926677EC5007FE51B /* QuotesModel.swift */; };
+		A232E8CD26677FA8007FE51B /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E8CC26677FA8007FE51B /* QuotesViewModel.swift */; };
+		A232E8CF2668B29B007FE51B /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E8CE2668B29B007FE51B /* QuotesView.swift */; };
+		A232E8D22668F8F4007FE51B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A232E8D12668F8F4007FE51B /* data.json */; };
+		A232E8D32668F8F4007FE51B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A232E8D12668F8F4007FE51B /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +73,7 @@
 /* Begin PBXFileReference section */
 		A232E88726666D9D007FE51B /* MotivationQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotivationQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A232E88A26666D9D007FE51B /* MotivationQuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationQuotesApp.swift; sourceTree = "<group>"; };
-		A232E88C26666D9D007FE51B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A232E88C26666D9D007FE51B /* OnboardingScreen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen1.swift; sourceTree = "<group>"; };
 		A232E88E26666D9F007FE51B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A232E89126666D9F007FE51B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A232E89326666D9F007FE51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +87,12 @@
 		A232E8AD26666DA1007FE51B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A232E8B026666DA1007FE51B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A232E8B226666DA1007FE51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A232E8C126667A0F007FE51B /* OnboardingScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen2.swift; sourceTree = "<group>"; };
+		A232E8C52667367E007FE51B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		A232E8C926677EC5007FE51B /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
+		A232E8CC26677FA8007FE51B /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		A232E8CE2668B29B007FE51B /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
+		A232E8D12668F8F4007FE51B /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				A232E88A26666D9D007FE51B /* MotivationQuotesApp.swift */,
-				A232E88C26666D9D007FE51B /* ContentView.swift */,
+				A232E8C0266679F1007FE51B /* Views */,
+				A232E8CB26677F5E007FE51B /* ViewModels */,
+				A232E8C826677E37007FE51B /* Models */,
+				A232E8D02668F8A5007FE51B /* Data */,
 				A232E88E26666D9F007FE51B /* Assets.xcassets */,
 				A232E89326666D9F007FE51B /* Info.plist */,
 				A232E89026666D9F007FE51B /* Preview Content */,
@@ -168,6 +184,41 @@
 				A232E8B026666DA1007FE51B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A232E8C0266679F1007FE51B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A232E88C26666D9D007FE51B /* OnboardingScreen1.swift */,
+				A232E8C52667367E007FE51B /* HomeScreen.swift */,
+				A232E8CE2668B29B007FE51B /* QuotesView.swift */,
+				A232E8C126667A0F007FE51B /* OnboardingScreen2.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A232E8C826677E37007FE51B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A232E8C926677EC5007FE51B /* QuotesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A232E8CB26677F5E007FE51B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A232E8CC26677FA8007FE51B /* QuotesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A232E8D02668F8A5007FE51B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A232E8D12668F8F4007FE51B /* data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A232E89226666D9F007FE51B /* Preview Assets.xcassets in Resources */,
+				A232E8D22668F8F4007FE51B /* data.json in Resources */,
 				A232E88F26666D9F007FE51B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A232E8B126666DA1007FE51B /* Preview Assets.xcassets in Resources */,
+				A232E8D32668F8F4007FE51B /* data.json in Resources */,
 				A232E8AE26666DA1007FE51B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A232E88D26666D9D007FE51B /* ContentView.swift in Sources */,
+				A232E8C62667367E007FE51B /* HomeScreen.swift in Sources */,
+				A232E8CF2668B29B007FE51B /* QuotesView.swift in Sources */,
+				A232E8CD26677FA8007FE51B /* QuotesViewModel.swift in Sources */,
+				A232E88D26666D9D007FE51B /* OnboardingScreen1.swift in Sources */,
+				A232E8CA26677EC5007FE51B /* QuotesModel.swift in Sources */,
+				A232E8C226667A0F007FE51B /* OnboardingScreen2.swift in Sources */,
 				A232E88B26666D9D007FE51B /* MotivationQuotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

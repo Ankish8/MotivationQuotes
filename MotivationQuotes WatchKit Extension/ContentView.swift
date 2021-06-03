@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  OnboardingScreen1.swift
 //  MotivationQuotes WatchKit Extension
 //
 //  Created by Ankish Khatri on 01/06/21.

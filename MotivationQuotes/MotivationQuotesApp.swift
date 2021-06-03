@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MotivationQuotesApp: App {
+    @StateObject var quotesVM: QuotesViewModel = QuotesViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
+                .environmentObject(quotesVM)
         }
+        
     }
 }
