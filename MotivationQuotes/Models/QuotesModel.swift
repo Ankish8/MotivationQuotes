@@ -9,4 +9,5 @@ import Foundation
 class QuotesModel: Identifiable, Decodable {
     var id:UUID?
     var quote = ""
+    var Category = ""
 }
