@@ -26,6 +26,7 @@
 		A232E8CF2668B29B007FE51B /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232E8CE2668B29B007FE51B /* QuotesView.swift */; };
 		A232E8D22668F8F4007FE51B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A232E8D12668F8F4007FE51B /* data.json */; };
 		A232E8D32668F8F4007FE51B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A232E8D12668F8F4007FE51B /* data.json */; };
+		A240637E266BC79B0063CA2C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240637D266BC79B0063CA2C /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		A232E8CC26677FA8007FE51B /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 		A232E8CE2668B29B007FE51B /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
 		A232E8D12668F8F4007FE51B /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A240637D266BC79B0063CA2C /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				A232E8C52667367E007FE51B /* HomeScreen.swift */,
 				A232E8CE2668B29B007FE51B /* QuotesView.swift */,
 				A232E8C126667A0F007FE51B /* OnboardingScreen2.swift */,
+				A240637D266BC79B0063CA2C /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				A232E88D26666D9D007FE51B /* OnboardingScreen1.swift in Sources */,
 				A232E8CA26677EC5007FE51B /* QuotesModel.swift in Sources */,
 				A232E8C226667A0F007FE51B /* OnboardingScreen2.swift in Sources */,
+				A240637E266BC79B0063CA2C /* CategoryView.swift in Sources */,
 				A232E88B26666D9D007FE51B /* MotivationQuotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

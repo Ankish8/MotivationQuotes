@@ -11,6 +11,7 @@ import SwiftUI
 struct HomeScreen: View {
     @EnvironmentObject var quotesVM: QuotesViewModel
     @State var offset: CGSize = .zero
+    @State var isSheet = false
 
     var body: some View {
         ZStack {
@@ -55,25 +56,33 @@ struct HomeScreen: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                    Rectangle()
-                        .frame(width: 90, height: 50, alignment: .center)
-                        .foregroundColor(Color(#colorLiteral(red: 1, green: 0.1764705882, blue: 0.3333333333, alpha: 1)))
-                        .cornerRadius(12)
-                        .overlay(
-                            HStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 3, content: {
-                                Image(systemName: "square.grid.2x2")
-                                Text("Happy")
-//                                    .fontWeight(.medium)
-                            }
-                        )
-                )}
-//                .padding(.leading, 34)
-//                .padding(.trailing, 24)
+                    
+                    
+                        
+                    
+                    Button(action: {
+                        isSheet.toggle()
+                    }, label: {
+                        HStack {
+                            Image(systemName: "square.grid.2x2")
+                            Text("Happy")
+                                
+                        }
+                    })
+                    .padding()
+                    .background(Color(#colorLiteral(red: 1, green: 0.1764705882, blue: 0.3333333333, alpha: 1)))
+                    .cornerRadius(12)
+                
+                    
+}
             }
             .frame(minWidth: 0)
             .padding()
             .accentColor(.white)
         }
+        .sheet(isPresented: $isSheet, content: {
+            CategoryView()
+        })
     }
 }
 
