@@ -12,6 +12,7 @@ struct HomeScreen: View {
     @EnvironmentObject var quotesVM: QuotesViewModel
     @State var offset: CGSize = .zero
     @State var isSheet = false
+    @State var isHeart = false
 
     var body: some View {
         ZStack {
@@ -47,8 +48,17 @@ struct HomeScreen: View {
                 
                 Spacer()
                 HStack {
-                    Image(systemName: "heart")
+                    Image(systemName: isHeart ? "heart" : "heart.fill")
                         .font(.system(size: 28))
+                        .scaleEffect(isHeart ? 1 : 1.2)
+                        .foregroundColor( isHeart ? Color.white : Color.red)
+                        .onTapGesture {
+                            isHeart.toggle()
+                        }
+                        .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0))
+//                        .animation(.interpolatingSpring(stiffness: 350, damping: 5, initialVelocity: 10))
+
+                        
                     Spacer()
                     Image(systemName: "square.and.arrow.up")
                         .font(.system(size: 28))
