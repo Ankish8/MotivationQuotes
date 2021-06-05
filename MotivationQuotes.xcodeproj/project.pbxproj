@@ -27,6 +27,7 @@
 		A232E8D22668F8F4007FE51B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A232E8D12668F8F4007FE51B /* data.json */; };
 		A232E8D32668F8F4007FE51B /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A232E8D12668F8F4007FE51B /* data.json */; };
 		A240637E266BC79B0063CA2C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240637D266BC79B0063CA2C /* CategoryView.swift */; };
+		A2406380266BDB3A0063CA2C /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240637F266BDB3A0063CA2C /* PopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		A232E8CE2668B29B007FE51B /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
 		A232E8D12668F8F4007FE51B /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A240637D266BC79B0063CA2C /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		A240637F266BDB3A0063CA2C /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				A232E8C826677E37007FE51B /* Models */,
 				A232E8D02668F8A5007FE51B /* Data */,
 				A232E88E26666D9F007FE51B /* Assets.xcassets */,
+				A240637F266BDB3A0063CA2C /* PopupView.swift */,
 				A232E89326666D9F007FE51B /* Info.plist */,
 				A232E89026666D9F007FE51B /* Preview Content */,
 			);
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2406380266BDB3A0063CA2C /* PopupView.swift in Sources */,
 				A232E8C62667367E007FE51B /* HomeScreen.swift in Sources */,
 				A232E8CF2668B29B007FE51B /* QuotesView.swift in Sources */,
 				A232E8CD26677FA8007FE51B /* QuotesViewModel.swift in Sources */,

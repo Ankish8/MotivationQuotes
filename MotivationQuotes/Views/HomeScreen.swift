@@ -13,6 +13,7 @@ struct HomeScreen: View {
     @State var offset: CGSize = .zero
     @State var isSheet = false
     @State var isHeart = false
+    @State var showingPopup = false
 
     var body: some View {
         ZStack {
@@ -45,7 +46,7 @@ struct HomeScreen: View {
                                     }
                                 }
                     )
-                
+                    
                 Spacer()
                 HStack {
                     Image(systemName: isHeart ? "heart" : "heart.fill")
@@ -54,6 +55,7 @@ struct HomeScreen: View {
                         .foregroundColor( isHeart ? Color.white : Color.red)
                         .onTapGesture {
                             isHeart.toggle()
+                            showingPopup.toggle()
                         }
                         .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0))
 //                        .animation(.interpolatingSpring(stiffness: 350, damping: 5, initialVelocity: 10))
@@ -93,6 +95,16 @@ struct HomeScreen: View {
         .sheet(isPresented: $isSheet, content: {
             CategoryView()
         })
+        
+        .popup(isPresented: $showingPopup, type: .floater(verticalPadding: 40), position: .top, autohideIn: 1.2) {
+                    HStack {
+                        Image(systemName: isHeart ? "bookmark" : "bookmark.fill")
+                        Text(isHeart ? "Removed" : "Bookmarked")
+                    }
+                    .frame(width: 180, height: 60)
+                    .background(Color(#colorLiteral(red: 1, green: 0.1764705882, blue: 0.3333333333, alpha: 1)))
+                    .cornerRadius(30.0)
+                }
     }
 }
 
