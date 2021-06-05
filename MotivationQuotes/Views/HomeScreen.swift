@@ -33,7 +33,6 @@ struct HomeScreen: View {
                     })
                 }
                 
-//                .padding()
                 Spacer()
                 QuotesView()
                     .offset(offset)
@@ -42,12 +41,9 @@ struct HomeScreen: View {
                                     withAnimation {
                                         offset = value.translation
                                     }
-                                    
                                 }
                     )
-//                    .onTapGesture {
-//                        quotesVM.quoteCount += 1
-//                    }
+                
                 Spacer()
                 HStack {
                     Image(systemName: "heart")
@@ -116,30 +112,6 @@ struct backgroundView: View {
     }
     
 }
-
-// MARK: QuotesView
-//struct QuotesView: View {
-//    @StateObject var quotesVM: QuotesViewModel
-//    var body: some View {
-//        VStack {
-//            HStack {
-//                    Image("appostphy")
-//                        .offset(x: -12)
-//                    Spacer()
-////                    Text(quotesVM.quotes[quotesVM.quoteCount].quote)
-//                Text("This is a same quote. And it means that it is working fine.")
-//                        //                    .font(.largeTitle)
-//                        .font(.system(size: 28))
-//                        .padding(.horizontal, 40)
-//                        .lineSpacing(10)
-//            }
-//
-//            .padding(.horizontal, 55)
-//        }
-//    }
-//}
-
-
 
 
 

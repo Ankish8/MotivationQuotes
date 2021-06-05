@@ -10,23 +10,38 @@ import SwiftUI
 // MARK: Quotes View
 struct QuotesView: View {
     @EnvironmentObject var quotesVM: QuotesViewModel
+//    lazy var totalCount = quotesVM.quotes.count
     var body: some View {
         LazyHStack(alignment: .center, spacing: 30) {
             ForEach(quotesVM.quotes) { i in
-                VStack {
-                    HStack {
-                        Image("appostphy")
-                        Spacer()
+                ForEach(quotesVM.quotes, content: { item in
+                    if item.Category == "Sad" {
+                        VStack {
+                            HStack {
+                                Image("appostphy")
+                                Spacer()
+                            }
+                            .padding(.horizontal)
+                            InnerQuoteView(item: item)
+                        }
+                        .frame(width: 350, height: 400, alignment: .center)
+                        .cornerRadius(10)
+                        
+                        
                     }
-                    .padding(.horizontal)
-                    InnerQuoteView(item: i)
                     
-                }
-                .frame(width: 350, height: 400, alignment: .center)
-                .cornerRadius(10)
+                    
+                })
+                
+                
+                
+                
+                
+                
+                
             }
         }
-        .modifier(ScrollingHStackModifier(items: 5, itemWidth: 350, itemSpacing: 30))
+        .modifier(ScrollingHStackModifier(items: quotesVM.quotes.count, itemWidth: 350, itemSpacing: 30))
         
         
     }
@@ -37,10 +52,13 @@ struct InnerQuoteView: View {
     @EnvironmentObject var quotesVM: QuotesViewModel
     let item: QuotesModel
     var body: some View {
-        Text(item.quote)
-                .font(.system(size: 28))
-                .lineSpacing(8)
-                .padding()
+
+            Text(item.quote)
+                    .font(.system(size: 28))
+                    .lineSpacing(8)
+                    .padding()
+        
+        
         
         
     }

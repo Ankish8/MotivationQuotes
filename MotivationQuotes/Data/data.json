@@ -4,7 +4,7 @@
 },
     {
         "quote": "This is a jSON file quote 2",
-        "Category": "Happy"
+        "Category": "Sad"
     },
     {
         "quote": "This is a jSON file quote 3",
@@ -16,7 +16,7 @@
     },
     {
         "quote": "This is a jSON file quote 5",
-        "Category": "Happy"
+        "Category": "Sad"
     },
     {
         "quote": "This is a jSON file quote 6",
@@ -24,6 +24,10 @@
     },
     {
         "quote": "This is a jSON file quote 7",
+        "Category": "Sad"
+    },
+    {
+        "quote": "This is a jSON file quote 8",
         "Category": "Happy"
     }
 ]
