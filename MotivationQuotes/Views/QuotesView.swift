@@ -21,28 +21,18 @@ struct QuotesView: View {
                                 Image("appostphy")
                                 Spacer()
                             }
+                            
                             .padding(.horizontal)
                             InnerQuoteView(item: item)
                         }
                         .frame(width: 350, height: 400, alignment: .center)
                         .cornerRadius(10)
-                        
-                        
                     }
-                    
-                    
                 })
-                
-                
-                
-                
-                
-                
                 
             }
         }
         .modifier(ScrollingHStackModifier(items: quotesVM.quotes.count, itemWidth: 350, itemSpacing: 30))
-        
         
     }
 }
@@ -52,17 +42,17 @@ struct InnerQuoteView: View {
     @EnvironmentObject var quotesVM: QuotesViewModel
     let item: QuotesModel
     var body: some View {
-
             Text(item.quote)
                     .font(.system(size: 28))
                     .lineSpacing(8)
                     .padding()
-        
-        
-        
+                
         
     }
 }
+
+
+
 
 //MARK: Custom Modifier
 struct ScrollingHStackModifier: ViewModifier {

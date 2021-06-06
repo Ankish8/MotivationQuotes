@@ -9,6 +9,7 @@ import Foundation
 class QuotesViewModel: ObservableObject {
     @Published var quotes = [QuotesModel]()
     @Published var newQuotes = [QuotesModel]()
+    @Published var isAnimate = false
     init() {
         // get the path to the json file whin the app bundle
         let pathString = Bundle.main.path(forResource: "data", ofType: "json")

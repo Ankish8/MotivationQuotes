@@ -12,8 +12,9 @@ struct HomeScreen: View {
     @EnvironmentObject var quotesVM: QuotesViewModel
     @State var offset: CGSize = .zero
     @State var isSheet = false
-    @State var isHeart = false
+    @State var isHeart = true
     @State var showingPopup = false
+    
 
     var body: some View {
         ZStack {
@@ -45,6 +46,7 @@ struct HomeScreen: View {
                                         offset = value.translation
                                     }
                                 }
+                                
                     )
                     
                 Spacer()
@@ -110,6 +112,8 @@ struct HomeScreen: View {
 
 // MARK: Background View
 struct backgroundView: View {
+    @EnvironmentObject var quotesVM: QuotesViewModel
+    
     var body: some View {
         ZStack {
 //            Color.black
@@ -117,24 +121,36 @@ struct backgroundView: View {
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.1960784314, green: 0.5333333333, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.7137254902, green: 0.1254901961, blue: 0.8784313725, alpha: 1))]), startPoint: UnitPoint(x: 1.4, y: 0), endPoint: UnitPoint(x: 0, y: 1)))
                 .frame(width: 555, height: 595)
-                .rotationEffect(.degrees(-27))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -20 : -27))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -7 : 0))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0).delay(0.1))
                 .offset(x: 200, y: -108)
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.1960784314, green: 0.5333333333, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.7137254902, green: 0.1254901961, blue: 0.8784313725, alpha: 1))]), startPoint: UnitPoint(x: 1.4, y: 0), endPoint: UnitPoint(x: 0, y: 1)))
                 .frame(width: 555, height: 595)
-                .rotationEffect(.degrees(-20))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -14 : -20))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0).delay(0.1))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -6 : 0))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0).delay(0.2))
                 .offset(x: 200, y: -108)
                 .opacity(0.58)
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.1960784314, green: 0.5333333333, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.7137254902, green: 0.1254901961, blue: 0.8784313725, alpha: 1))]), startPoint: UnitPoint(x: 1.4, y: 0), endPoint: UnitPoint(x: 0, y: 1)))
                 .frame(width: 555, height: 595)
-                .rotationEffect(.degrees(-14))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -8 : -14))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0).delay(0.2))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -6 : 0))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0).delay(0.3))
                 .offset(x: 200, y: -108)
                 .opacity(0.48)
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.1960784314, green: 0.5333333333, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.7137254902, green: 0.1254901961, blue: 0.8784313725, alpha: 1))]), startPoint: UnitPoint(x: 1.4, y: 0), endPoint: UnitPoint(x: 0, y: 1)))
                 .frame(width: 555, height: 595)
-                .rotationEffect(.degrees(-8))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -4 : -8))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0).delay(0.3))
+                .rotationEffect(.degrees(quotesVM.isAnimate ? -4 : 0))
+                .animation(.spring(response: 0.5, dampingFraction: 0.4, blendDuration: 0).delay(0.4))
                 .offset(x: 200, y: -108)
                 .opacity(0.38)
 

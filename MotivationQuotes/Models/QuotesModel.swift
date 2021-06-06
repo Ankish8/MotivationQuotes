@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class QuotesModel: Identifiable, Decodable {
+class QuotesModel: Identifiable, Codable {
     var id:UUID?
     var quote = ""
     var Category = ""
